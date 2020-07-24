@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:test_exercise/ui/AddStaff/widgets/custom_switch_with_text_indicator.dart';
+
 import '../../themes/TestExerciseTheme.dart';
+import '../Homepage/homepage.dart';
 import 'widgets/custom_app_bar.dart';
+import 'widgets/custom_switch_with_text_indicator.dart';
 
 class AddStaffPage extends StatefulWidget {
   @override
@@ -324,7 +326,12 @@ class _AddStaffPageState extends State<AddStaffPage> {
             ),
             SizedBox(height: 35.0),
             FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
               child: Container(
                 width: 140.0,
                 decoration: BoxDecoration(

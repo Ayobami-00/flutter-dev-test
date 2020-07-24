@@ -7,6 +7,14 @@ ThemeData testExerciseTheme() {
     accentColor: Color(0xffFE8137),
     textSelectionColor: Color(0xFFBEC2CE),
     buttonColor: Color(0xFF6619EA),
+    appBarTheme: AppBarTheme(
+        textTheme: TextTheme(
+      bodyText1: TextStyle(
+          fontFamily: "Avenir LT Std",
+          fontWeight: FontWeight.w200,
+          fontSize: 15,
+          color: Colors.black),
+    )),
     textTheme: TextTheme(
         headline1: TextStyle(
             fontFamily: "Avenir",
@@ -18,6 +26,11 @@ ThemeData testExerciseTheme() {
             fontWeight: FontWeight.w700,
             fontSize: 17,
             color: Color(0xFFBEC2CE)),
+        headline5: TextStyle(
+            fontFamily: "Avenir LT Std",
+            fontWeight: FontWeight.w200,
+            fontSize: 13,
+            color: Color(0xFF050505)),
         subtitle1: TextStyle(
             fontFamily: "Avenir",
             fontWeight: FontWeight.normal,

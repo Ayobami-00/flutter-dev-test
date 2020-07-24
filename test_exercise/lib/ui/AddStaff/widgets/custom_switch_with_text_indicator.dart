@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_exercise/themes/TestExerciseTheme.dart';
 
 class CustomSwichtWidgetWithTextIndicator extends StatefulWidget {
   final String textIndicatorLabel;

@@ -21,44 +21,46 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: _buildAppBar(),
-      body: Stack(
-        children: <Widget>[
-          CustomScrollView(
-            slivers: <Widget>[
-              new SliverAppBar(
-                backgroundColor: Colors.white,
-                pinned: false,
-                expandedHeight: 2.0,
-                bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(0.0),
-                  child: new TabBar(
-                    labelColor: Color(0xFF050505),
-                    labelStyle: testExerciseTheme().appBarTheme.textTheme.bodyText1,
-                    unselectedLabelColor: Colors.black,
-                    indicatorColor: Color(0xFFE0115F),
-                    indicatorWeight: 3.0,
-                    tabs: [
-                      new Tab(text: 'DASHBOARD'),
-                      new Tab(text: 'ACTIVITY'),
-                    ],
-                    controller: controller,
+    return SafeArea(
+          child: new Scaffold(
+        appBar: _buildAppBar(),
+        body: Stack(
+          children: <Widget>[
+            CustomScrollView(
+              slivers: <Widget>[
+                new SliverAppBar(
+                  backgroundColor: Colors.white,
+                  pinned: false,
+                  expandedHeight: 2.0,
+                  bottom: PreferredSize(
+                    preferredSize: Size.fromHeight(0.0),
+                    child: new TabBar(
+                      labelColor: Color(0xFF050505),
+                      labelStyle: testExerciseTheme().appBarTheme.textTheme.bodyText1,
+                      unselectedLabelColor: Colors.black,
+                      indicatorColor: Color(0xFFE0115F),
+                      indicatorWeight: 3.0,
+                      tabs: [
+                        new Tab(text: 'DASHBOARD'),
+                        new Tab(text: 'ACTIVITY'),
+                      ],
+                      controller: controller,
+                    ),
                   ),
                 ),
-              ),
-              new SliverFillRemaining(
-                child: TabBarView(
-                  controller: controller,
-                  children: <Widget>[
-                    DashBoardPage(),
-                    Text(" "),
-                  ],
+                new SliverFillRemaining(
+                  child: TabBarView(
+                    controller: controller,
+                    children: <Widget>[
+                      DashBoardPage(),
+                      Text(" "),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

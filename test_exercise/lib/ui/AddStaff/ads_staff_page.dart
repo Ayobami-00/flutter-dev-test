@@ -14,344 +14,347 @@ class _AddStaffPageState extends State<AddStaffPage> {
   bool status = true;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _buildAppBar(),
-      body: ListView(
-          shrinkWrap: true,
-          padding: EdgeInsets.all(15.0),
-          children: <Widget>[
-            SizedBox(height: 50.0),
-            _buildStaffName('Name of Staff'),
-            _buildStaffEmail('Email'),
-            _buildStaffAddress('Address'),
-            _buildStaffPhoneNo('Phone No.'),
-            _buildStaffPassword('Password'),
-            _buildStaffImageSelection('Staff Image', 'Select File'),
-            _buildStaffLocation('Select Staff Location'),
-            _buildTitle('Select Staff Acess Rights'),
-            _buildHeaderTitle('Access to Sales Register'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Online Pos",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "All Sales Reports",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderTitle('Access to Customers'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "View Customers",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-                setState(() {
-                  status = value;
-                });
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add/Edit Customer",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderTitle('Access to Suppliers'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "View Suppliers",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-                setState(() {
-                  status = value;
-                });
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add/Edit Suppliers",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderTitle('Access to Products and Services'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Access to Product List",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add Products",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "View Cost Price",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Edit Product/Service",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Restock Product",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Delete Product/Service",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderTitle('Access to Staff'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add / Edit Staff",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "View Staff",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderTitle('Access to Reporting'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Sales Report",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Inventory Report",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Expense Report",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderMultipleTitle(
-                'Access to Profile', '(Allow Staff to Edit his/her Details)'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Update Profile Setting",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            _buildHeaderTitle('Access to Expense'),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add/Edit Expenses",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "View Expenses",
-              textIndicatorStyle: testExerciseTheme().textTheme.headline3,
-              activeSwitchText: "On",
-              inactiveSwitchText: "Off",
-              inactiveSwitchColor: Color(0xFFCBCFDD),
-              activeSwitchColor: Color(0xFFE0115F),
-              switchValue: status,
-              activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
-              inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
-              onChangedSwitch: (value) {
-                print("VALUE : $value");
-              },
-            ),
-            SizedBox(height: 35.0),
-            FlatButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
-              child: Container(
-                width: 140.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFE0115F),
-                ),
-                padding: EdgeInsets.all(12),
-                child: Center(
-                  child: Text(
-                    "Save",
-                    style: testExerciseTheme()
-                        .textTheme
-                        .headline3
-                        .copyWith(color: Colors.white),
+    return SafeArea(
+          child: Scaffold(
+        appBar: _buildAppBar(),
+        body: ListView(
+            shrinkWrap: true,
+            padding: EdgeInsets.all(15.0),
+            children: <Widget>[
+              SizedBox(height: 50.0),
+              _buildStaffName('Name of Staff'),
+              _buildStaffEmail('Email'),
+              _buildStaffAddress('Address'),
+              _buildStaffPhoneNo('Phone No.'),
+              _buildStaffPassword('Password'),
+              _buildStaffImageSelection('Staff Image', 'Select File'),
+              _buildStaffLocation('Select Staff Location'),
+              _buildTitle('Select Staff Acess Rights'),
+              _buildHeaderTitle('Access to Sales Register'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Online Pos",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "All Sales Reports",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderTitle('Access to Customers'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "View Customers",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                  setState(() {
+                    status = value;
+                  });
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Add/Edit Customer",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderTitle('Access to Suppliers'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "View Suppliers",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                  setState(() {
+                    status = value;
+                  });
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Add/Edit Suppliers",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderTitle('Access to Products and Services'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Access to Product List",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Add Products",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "View Cost Price",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Edit Product/Service",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Restock Product",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Delete Product/Service",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderTitle('Access to Staff'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Add / Edit Staff",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "View Staff",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderTitle('Access to Reporting'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Sales Report",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Inventory Report",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Expense Report",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderMultipleTitle(
+                  'Access to Profile', '(Allow Staff to Edit his/her Details)'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Update Profile Setting",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              _buildHeaderTitle('Access to Expense'),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "Add/Edit Expenses",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              CustomSwichtWidgetWithTextIndicator(
+                textIndicatorLabel: "View Expenses",
+                textIndicatorStyle: testExerciseTheme().textTheme.headline3,
+                activeSwitchText: "On",
+                inactiveSwitchText: "Off",
+                inactiveSwitchColor: Color(0xFFCBCFDD),
+                activeSwitchColor: Color(0xFFE0115F),
+                switchValue: status,
+                activeSwitchTextTheme: testExerciseTheme().textTheme.subtitle1,
+                inactiveSwitchTextTheme: testExerciseTheme().textTheme.subtitle2,
+                onChangedSwitch: (value) {
+                  print("VALUE : $value");
+                },
+              ),
+              SizedBox(height: 35.0),
+              //!Note: This button leads you to the next page in the design
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
+                child: Container(
+                  width: 140.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFE0115F),
+                  ),
+                  padding: EdgeInsets.all(12),
+                  child: Center(
+                    child: Text(
+                      "Save",
+                      style: testExerciseTheme()
+                          .textTheme
+                          .headline3
+                          .copyWith(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 50.0),
-          ]),
+              SizedBox(height: 50.0),
+            ]),
+      ),
     );
   }
 

@@ -27,10 +27,12 @@ class CustomSwichtWidgetWithTextIndicator extends StatefulWidget {
       : super(key: key);
 
   @override
-  _CustomSwichtWidgetWithTextIndicatorState createState() => _CustomSwichtWidgetWithTextIndicatorState();
+  _CustomSwichtWidgetWithTextIndicatorState createState() =>
+      _CustomSwichtWidgetWithTextIndicatorState();
 }
 
-class _CustomSwichtWidgetWithTextIndicatorState extends State<CustomSwichtWidgetWithTextIndicator>
+class _CustomSwichtWidgetWithTextIndicatorState
+    extends State<CustomSwichtWidgetWithTextIndicator>
     with SingleTickerProviderStateMixin {
   Animation _circleAnimation;
   AnimationController _animationController;
@@ -41,8 +43,12 @@ class _CustomSwichtWidgetWithTextIndicatorState extends State<CustomSwichtWidget
     _animationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 60));
     _circleAnimation = AlignmentTween(
-            begin: widget.switchValue ? Alignment.centerRight : Alignment.centerLeft,
-            end: widget.switchValue ? Alignment.centerLeft : Alignment.centerRight)
+            begin: widget.switchValue
+                ? Alignment.centerRight
+                : Alignment.centerLeft,
+            end: widget.switchValue
+                ? Alignment.centerLeft
+                : Alignment.centerRight)
         .animate(CurvedAnimation(
             parent: _animationController, curve: Curves.linear));
   }
@@ -105,22 +111,28 @@ class _CustomSwichtWidgetWithTextIndicatorState extends State<CustomSwichtWidget
                         height: 25.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.0),
-                            color: _circleAnimation.value == Alignment.centerLeft
-                                ? widget.inactiveSwitchColor
-                                : widget.activeSwitchColor),
+                            color:
+                                _circleAnimation.value == Alignment.centerLeft
+                                    ? widget.inactiveSwitchColor
+                                    : widget.activeSwitchColor),
                         child: Padding(
                           padding: const EdgeInsets.only(
-                              top: 4.0, bottom: 4.0, right: 4.0, left: 4.0),
+                              top: 4.0, bottom: 4.0, right: 0.0, left: 0.0),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
                               _circleAnimation.value == Alignment.centerRight
                                   ? Padding(
                                       padding: const EdgeInsets.only(
                                           left: 4.0, right: 4.0),
-                                      child: Text(
-                                        widget.activeSwitchText,
-                                        style: widget.activeSwitchTextTheme,
+                                      child: Row(
+                                        children: <Widget>[
+                                          Text(
+                                            widget.activeSwitchText,
+                                            style: widget.activeSwitchTextTheme,
+                                          ),
+                                          SizedBox(width: 25.0),
+                                        ],
                                       ),
                                     )
                                   : Container(),
@@ -137,10 +149,15 @@ class _CustomSwichtWidgetWithTextIndicatorState extends State<CustomSwichtWidget
                               _circleAnimation.value == Alignment.centerLeft
                                   ? Padding(
                                       padding: const EdgeInsets.only(
-                                          left: 4.0, right: 5.0),
-                                      child: Text(
-                                        widget.inactiveSwitchText,
-                                        style: widget.inactiveSwitchTextTheme,
+                                          left: 0.0, right: 4.0),
+                                      child: Row(
+                                        children: <Widget>[
+                                          SizedBox(width: 25.0),
+                                          Text(
+                                            widget.inactiveSwitchText,
+                                            style: widget.inactiveSwitchTextTheme,
+                                          ),
+                                        ],
                                       ),
                                     )
                                   : Container(),

@@ -37,7 +37,7 @@ List<CardItemModel> getCardItems() {
   //0
 
   cardItemModel = CardItemModel();
-  cardItemModel.setImageAssetPath("assets/icons/sales.png");
+  cardItemModel.setImageAssetPath("assets/icons/commerce-and-shopping.png");
   cardItemModel.setTile("Sales Register");
   cardItemModel.setNumber(null);
   items.add(cardItemModel);

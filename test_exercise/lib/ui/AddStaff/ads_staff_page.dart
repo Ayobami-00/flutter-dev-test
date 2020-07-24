@@ -90,9 +90,9 @@ class _AddStaffPageState extends State<AddStaffPage> {
                 print("VALUE : $value");
               },
             ),
-            _buildHeaderTitle('Access to Supplies'),
+            _buildHeaderTitle('Access to Suppliers'),
             CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "View Supplies",
+              textIndicatorLabel: "View Suppliers",
               textIndicatorStyle: testExerciseTheme().textTheme.headline3,
               activeSwitchText: "On",
               inactiveSwitchText: "Off",
@@ -109,7 +109,7 @@ class _AddStaffPageState extends State<AddStaffPage> {
               },
             ),
             CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add/Edit Supplies",
+              textIndicatorLabel: "Add/Edit Suppliers",
               textIndicatorStyle: testExerciseTheme().textTheme.headline3,
               activeSwitchText: "On",
               inactiveSwitchText: "Off",
@@ -209,7 +209,7 @@ class _AddStaffPageState extends State<AddStaffPage> {
             ),
             _buildHeaderTitle('Access to Staff'),
             CustomSwichtWidgetWithTextIndicator(
-              textIndicatorLabel: "Add/Edit Staff",
+              textIndicatorLabel: "Add / Edit Staff",
               textIndicatorStyle: testExerciseTheme().textTheme.headline3,
               activeSwitchText: "On",
               inactiveSwitchText: "Off",
@@ -357,7 +357,7 @@ class _AddStaffPageState extends State<AddStaffPage> {
 
   Widget _buildAppBar() {
     return CustomAppBar(
-      height: 50,
+      height: 30,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
@@ -365,12 +365,12 @@ class _AddStaffPageState extends State<AddStaffPage> {
           children: <Widget>[
             Icon(
               Icons.arrow_back,
-              color: Colors.black,
+              color: Color(0xFFE0115F),
               size: 30.0,
             ),
             Icon(
               Icons.more_vert,
-              color: Colors.black,
+              color: Color(0xFFE0115F),
               size: 30.0,
             ),
           ],

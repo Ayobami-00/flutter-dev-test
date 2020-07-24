@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage>
                   controller: controller,
                   children: <Widget>[
                     DashBoardPage(),
-                    Text("Tab 3"),
+                    Text(" "),
                   ],
                 ),
               ),
@@ -65,14 +65,14 @@ class _HomePageState extends State<HomePage>
 
   Widget _buildAppBar() {
     return CustomAppBar(
-      height: 50,
+      height: 30,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Align(
           alignment: Alignment.centerRight,
           child: Icon(
             Icons.more_vert,
-            color: Colors.black,
+            color: Color(0xFFE0115F),
             size: 30.0,
           ),
         ),
